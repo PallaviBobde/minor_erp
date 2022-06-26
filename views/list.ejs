@@ -1,0 +1,59 @@
+<%- include('header'); -%>
+
+<div class="box">
+  <a class="login_btn" href="/admin_login"><i class="fa fa-user"></i> Admin login</a>
+  <a class="login_btn" href="/form"><i class="fa fa-plus"></i> Add Task</a>
+</div>
+
+    <div class="box">
+        <h1 id="heading">
+          <i class="fa fa-tasks"></i> Tasks assigned
+        </h1>
+    </div>
+
+    <div class="box">
+
+        <table>
+            <tr>
+              <th>ENQ No.</th>
+              <th>TASK</th>
+              <th>ASSIGN DATE</th>
+              <th>ASSIGN DPT</th>
+              <th>ASSIGN BY</th>
+              <th>COMPLETION DATE</th>
+              <th>Status</th>
+              <th>Remarks</th>
+            </tr>
+
+            <% for(var i=0 ;i<listitemejs.length;i++){ %>
+            <tr>
+              <td><%= listitemejs[i].enq_no %></td>
+              <td><%= listitemejs[i].task %></td>
+              <td><%= listitemejs[i].assign_date %></td>
+              <td><%= listitemejs[i].assign_dpt %></td>
+              <td><%= listitemejs[i].assign_by %></td>
+              <td><%= listitemejs[i].completion_date %></td>
+              <td><%= listitemejs[i].status %></td>
+              <td><%= listitemejs[i].remarks %></td>
+            </tr>
+            <% } %>
+
+          </table>
+
+            <!-- <form class="item" style="width: 100%;" action="/" method="post">
+                    <input type="text" name="enq_no" placeholder="enq_no" autocomplete="off">
+                    <input type="text" name="task" placeholder="task" autocomplete="off">
+                    <input type="text" name="assign_by" placeholder="assign_by" autocomplete="off">
+                    <input type="text" name="assign_date" placeholder="assign_date" autocomplete="off">
+                    <input type="text" name="assign_dpt" placeholder="assign_dpt" autocomplete="off">
+                    <input type="text" name="completion_date" placeholder="completion_date" autocomplete="off">
+                    <input type="text" name="status" placeholder="status" autocomplete="off">
+                    <input type="text" name="remarks" placeholder="remarks" autocomplete="off">
+                    <button type="Submit" name="list" value="<%= listTitle %>" >+</button>
+            </form> -->
+
+    </div>
+
+
+
+    <%- include('footer'); -%>

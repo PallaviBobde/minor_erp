@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/formfile.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2><i class="fa fa-plus"></i> Add Task</h2>
+        <form  class="form" style="width: 100%;" action="/" method="post">
+            <div class="element">
+                <label>Enq no : </label>
+                <input type="number" name="enq_no" placeholder="Enter enq_no" autocomplete="off">    
+            </div>
+            <div class="element">
+                <label>Task : </label>
+                <input type="text" name="task" placeholder="Enter task" autocomplete="off">
+            </div>
+            <div class="element">
+                <label>Assign By :</label>
+                <input type="text" name="assign_by" placeholder="Enter assign_by" autocomplete="off">
+            </div>
+            <div class="element">
+                <label>Assign Date :</label>
+                <input type="date" name="assign_date" placeholder="Enter assign_date" autocomplete="off">
+            </div>
+            <div class="element">
+                <label>Assign dpt :</label>
+                <select id="dpt" name="assign_dpt">
+                    <option value="marketing">Marketing</option>
+                    <option value="production">Production</option>
+                    <option value="purchase">Purchase</option>
+                    <option value="maintainance">Maintainance</option>
+                    <option value="quality_control">Quality Control</option>
+                    <option value="assign_tools">Assign Tools</option>
+                  </select>
+            </div>
+            <div class="element">
+                <label>Completion Date :</label>
+                <input type="date" name="completion_date" placeholder="Enter completion_date" autocomplete="off">
+            </div>
+            <div class="element">
+                <label>Status :</label>
+                <input type="text" name="status" placeholder="Enter status" autocomplete="off">
+            </div>
+            <div class="element">
+                <label>Remarks :</label>
+                <input type="text" name="remarks" placeholder="Enter remarks" autocomplete="off">
+            </div>
+            
+            <div>
+            <button class="btn" type="Submit" name="list" value="" >+</button>
+        </div>
+    </form>
+    
+    </div>
+    
+</body>
+</html>
